@@ -1,0 +1,104 @@
+header {
+    background-color: #22223B; /* Dark Indigo */
+     color: #F2E9E4; /* Light Cream */
+     padding: 10px 20px; /* Reduced padding */
+     display: flex;
+     justify-content: space-between; /* Aligns elements to the left and right */
+     align-items: center; /* Vertically center elements */
+   }
+   
+   /* College Name (on the left) */
+   .institute-name {
+     margin: 0;
+     font-size: 28px; /* Reduced font size */
+     font-weight: bold;
+     font-family: 'Playfair Display', serif;
+   }
+   .header-left {
+     display: flex;
+     align-items: center;
+   }
+.department-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    background-color: #4A4E69;
+    border-radius: 10px;
+  }
+  
+  .department-nav li {
+    margin: 10px;
+  }
+  
+  .department-nav a {
+    text-decoration: none;
+    color: #F2E9E4;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .department-nav a:hover {
+    background-color: #9A8C98;
+    color: #fff;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #C9ADA7;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li a {
+    color: #F2E9E4;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    color: #C9ADA7;
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #C9ADA7;
+  }
+  .social-icons a {
+    margin-right: 10px;
+    color: #F2E9E4;
+    text-decoration: none;
+  }
+  
+  .social-icons i {
+    margin-right: 6px;
+    color: #C9ADA7;
+  }
+  
+  .social-icons a:hover i {
+    color: #F2E9E4;
+  }
+  
