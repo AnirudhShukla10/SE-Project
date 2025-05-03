@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Departments</title>
-  <link rel="stylesheet" href="department.css" />
+  <link rel="stylesheet" href="clubs.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
  <!-- Header -->
@@ -40,81 +41,58 @@
        </nav>
      </header>
 
-  <main>
-    <div class="department-heading">
-        <h2>MEC Clubs</h2>
-        <div class="underline"></div>
-      </div>
-      
-    <div class="accordion-item">
-      <div class="accordion-header">
-        Music Club
-        <div class="accordion-icon">+</div>
-      </div>
-      <div class="accordion-content">
-        Civil Engineering focuses on infrastructure, structural design, and environmental systems.
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <div class="accordion-header">
-        Dance Club
-        <div class="accordion-icon">+</div>
-      </div>
-      <div class="accordion-content">
-        CSE emphasizes programming, algorithms, AI, and machine learning.
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <div class="accordion-header">
-        Photography Club
-        <div class="accordion-icon">+</div>
-      </div>
-      <div class="accordion-content">
-        ECE covers communication systems, embedded design, and VLSI.
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <div class="accordion-header">
-        Sports Club
-        <div class="accordion-icon">+</div>
-      </div>
-      <div class="accordion-content">
-        EEE blends power systems, automation, and electrical circuits.
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <div class="accordion-header">
-        Coding Club
-        <div class="accordion-icon">+</div>
-      </div>
-      <div class="accordion-content">
-        IT includes web dev, cybersecurity, databases, and cloud computing.
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <div class="accordion-header">
-        Orators Club
-        <div class="accordion-icon">+</div>
-      </div>
-      <div class="accordion-content">
-        Mechanical Engineering covers design, manufacturing, and robotics.
-      </div>
-    </div>
-    <div class="accordion-item">
-        <div class="accordion-header">
-          MCC
-          <div class="accordion-icon">+</div>
+     <section class="clubs-section">
+      <h2>College Clubs</h2>
+      <div class="club-grid">
+        <div class="club-box">
+          <span class="club-name">Coding Club</span>
+          <span class="arrow">&#8594;</span>
         </div>
-        <div class="accordion-content">
-          Mechanical Engineering covers design, manufacturing, and robotics.
+        <div class="club-box">
+          <span class="club-name">Cultural Club</span>
+          <span class="arrow">&#8594;</span>
+        </div>
+        <div class="club-box">
+          <span class="club-name">Robotics Club</span>
+          <span class="arrow">&#8594;</span>
+        </div>
+        <!-- Add more club-boxes here -->
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Matrusri Engineering College<br>
+             Saidabad, Hyderabad, Telangana<br>
+             Phone: +91-XXXXXXXXXX<br>
+             Email: info@matrusri.edu.in
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">Placements</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <p class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a> |
+              <a href="#"><i class="fab fa-instagram"></i> Instagram</a> |
+              <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            </p>
+            
         </div>
       </div>
-  </main>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Matrusri Engineering College. All rights reserved.</p>
+      </div>
+    </footer>
+    
 
   <!-- JS for Accordion Toggle -->
   <script>
