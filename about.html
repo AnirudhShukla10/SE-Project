@@ -6,6 +6,8 @@
   <title>About the Institution</title>
   <link rel="stylesheet" href="style.css"> 
   <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
 
 </head>
 <body>
@@ -22,7 +24,7 @@
     </div>
         <nav class="main-nav">
           <ul>
-            <a href="index.html">Home</a>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">Login</a></li>
             <li class="dropdown">
               <a href="#">About</a>
@@ -32,8 +34,7 @@
                 <a href="#">Administration</a>
                 <a href="#">Departments</a>
                 <a href="#">Admission</a>
-                <a href="#">Facilities</a>
-                <a href="#">Students</a>
+              
                 <a href="#">Clubs</a>
               </div>
             </li>
@@ -55,6 +56,44 @@
 
       
   </main>
+  <!-- Font Awesome CDN for Icons -->
+
+<section class="stats-section">
+  <h2>About the College</h2>
+  <div class="stats-container">
+    <div class="stat-box">
+      <i class="fas fa-user-graduate"></i>
+      <h3>Students</h3>
+      <p class="counter" data-target="2800">0</p>
+    </div>
+    <div class="stat-box">
+      <i class="fas fa-chalkboard-teacher"></i>
+      <h3>Faculty Members</h3>
+      <p class="counter" data-target="100">0</p>
+    </div>
+    <div class="stat-box">
+      <i class="fas fa-university"></i>
+      <h3>Established</h3>
+      <p class="counter" data-target="2011">0</p>
+    </div>
+    <div class="stat-box">
+      <i class="fas fa-trophy"></i>
+      <h3>College Ranking</h3>
+      <p class="counter" data-target="180">#0</p>
+    </div>
+    <div class="stat-box">
+      <i class="fas fa-users"></i>
+      <h3>Alumni</h3>
+      <p class="counter" data-target="4122">0</p>
+    </div>
+    <div class="stat-box">
+      <i class="fas fa-building"></i>
+      <h3>Departments</h3>
+      <p class="counter" data-target="6">0</p>
+    </div>
+  </div>
+</section>
+
 
   <footer class="site-footer">
     <div class="footer-content">
@@ -89,6 +128,31 @@
       <p>&copy; 2025 Matrusri Engineering College. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    const counters = document.querySelectorAll('.counter');
+  
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const speed = 50; // smaller is faster
+      const isRanking = counter.textContent.includes('#');
+  
+      const updateCount = () => {
+        const current = +counter.textContent.replace(/[^\d]/g, '');
+        const increment = Math.ceil(target / speed);
+  
+        if (current < target) {
+          counter.textContent = isRanking ? `#${current + increment}` : `${current + increment}`;
+          setTimeout(updateCount, 30);
+        } else {
+          counter.textContent = isRanking ? `#${target}` : `${target.toLocaleString()}`;
+        }
+      };
+  
+      updateCount();
+    });
+  </script>
+  
   
 </body>
 </html>

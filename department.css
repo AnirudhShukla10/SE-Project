@@ -71,9 +71,19 @@ header {
   font-family: 'Lato', sans-serif;
 }
 
-.main-nav a:hover {
-  background-color: #C9ADA7; /* Dusty Pink */
-  color: #22223B; /* Dark Indigo on hover */
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #ffcc00; /* underline color */
+  transition: width 0.3s ease-in-out;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
 }
 
 /* Dropdown Menu */

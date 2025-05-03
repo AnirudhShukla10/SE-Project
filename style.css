@@ -44,7 +44,8 @@ body {
 }
   
   .main-nav {
-    margin-left: auto;  /* Pushes nav to the right */
+    margin-left: auto; 
+     /* Pushes nav to the right */
   }
   /* Navigation Bar */
   .main-nav ul {
@@ -71,9 +72,19 @@ body {
     font-family: 'Lato', sans-serif;
   }
   
-  .main-nav a:hover {
-    background-color: #C9ADA7; /* Dusty Pink */
-    color: #22223B; /* Dark Indigo on hover */
+  .main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #ffcc00; /* underline color */
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .main-nav a:hover::after {
+    width: 100%;
   }
   
   /* Dropdown Menu */
@@ -366,6 +377,47 @@ body {
   
   .social-icons a:hover i {
     color: #F2E9E4;
+  }
+  .explore-section {
+    background-color: #F2E9E4;
+    color: #22223B;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    margin-top: 40px;
+  }
+  
+  .explore-section h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .explore-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .explore-links a {
+    text-decoration: none;
+    color: #22223B;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .explore-links a:hover {
+    color: #4A4E69;
+    text-decoration: underline;
+  }
+  
+  .divider {
+    height: 20px;
+    width: 2px;
+    background-color: #C9ADA7;
   }
   
   
