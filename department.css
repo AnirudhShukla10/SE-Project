@@ -1,59 +1,194 @@
+/* Reset & Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  /* Soft Cream */
+  color: #22223B; /* Dark Indigo */
+}
+
+/* Header */
 header {
-    background-color: #22223B; /* Dark Indigo */
-     color: #F2E9E4; /* Light Cream */
-     padding: 10px 20px; /* Reduced padding */
-     display: flex;
-     justify-content: space-between; /* Aligns elements to the left and right */
-     align-items: center; /* Vertically center elements */
-   }
-   
-   /* College Name (on the left) */
-   .institute-name {
-     margin: 0;
-     font-size: 28px; /* Reduced font size */
-     font-weight: bold;
-     font-family: 'Playfair Display', serif;
-   }
-   .header-left {
-     display: flex;
-     align-items: center;
-   }
-.department-nav ul {
+ background-color: #22223B; /* Dark Indigo */
+  color: #F2E9E4; /* Light Cream */
+  padding: 10px 20px; /* Reduced padding */
+  display: flex;
+  justify-content: space-between; /* Aligns elements to the left and right */
+  align-items: center; /* Vertically center elements */
+}
+
+/* College Name (on the left) */
+.institute-name {
+  margin: 0;
+  font-size: 28px; /* Reduced font size */
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+}
+/* Flex container for logo and title */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 20px;
+}
+
+/* College Logo */
+.college-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.main-nav {
+  margin-left: auto;  /* Pushes nav to the right */
+}
+/* Navigation Bar */
+.main-nav ul {
+  
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.main-nav li {
+  position: relative;
+  margin: 0 20px;
+}
+
+.main-nav a {
+ 
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: #F2E9E4; /* Soft Cream */
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Lato', sans-serif;
+}
+
+.main-nav a:hover {
+  background-color: #C9ADA7; /* Dusty Pink */
+  color: #22223B; /* Dark Indigo on hover */
+}
+
+/* Dropdown Menu */
+/* Dropdown Menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #F2E9E4; /* Soft Cream */
+  min-width: 220px;
+  max-width: calc(100% - 20px); /* Ensure dropdown doesn't exceed page width */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  border: 1px solid #C9ADA7;
+}
+
+.dropdown-content a {
+  color: #22223B; /* Dark Indigo */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Lato', sans-serif;
+}
+
+.dropdown-content a:hover {
+  background-color: #9A8C98; /* Mauve Gray */
+  color: #F2E9E4; /* Soft Cream */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Adjust the position if the dropdown goes out of the right edge */
+.dropdown:hover .dropdown-content {
+  left: auto;
+  right: 0; /* Align dropdown to the right */
+}
+/* Header Text Below Institute Name */
+.tagline {
+  margin: 5px 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #C9ADA7; /* Light muted color for contrast */
+  font-family: 'Lato', sans-serif;
+}
+.department-heading {
+  text-align: left; /* Change to 'center' if you want it centered */
+  margin-bottom: 30px;
+}
+
+.department-heading h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #4A4E69; /* Adjust heading color here */
+  margin: 0;
+}
+
+.department-heading .underline {
+  height: 4px;
+  width: 130px; /* Length of the line */
+  background-color: #ab7e65;
+  margin-top: 8px;
+}
+
+
+  
+  main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .accordion-header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .accordion-icon {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #00bcd4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-    background-color: #4A4E69;
-    border-radius: 10px;
+    font-size: 18px;
+    color: #00bcd4;
+    transition: transform 0.3s ease;
   }
-  
-  .department-nav li {
-    margin: 10px;
+
+  .accordion-icon.rotate {
+    transform: rotate(45deg);
   }
-  
-  .department-nav a {
-    text-decoration: none;
-    color: #F2E9E4;
-    font-weight: bold;
-    padding: 10px 15px;
+
+  .accordion-content {
+    display: none;
+    padding-bottom: 16px;
+    color: #333;
+    font-size: 15px;
+  }
+
+  .accordion-item.active .accordion-content {
     display: block;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-  }
-  
-  .department-nav a:hover {
-    background-color: #9A8C98;
-    color: #fff;
-  }
-  .footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #C9ADA7;
   }
   
   .footer-section {

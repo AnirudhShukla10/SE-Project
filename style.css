@@ -28,6 +28,20 @@ body {
     display: flex;
     align-items: center;
   }
+  /* Flex container for logo and title */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 20px;
+}
+
+/* College Logo */
+.college-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
   
   .main-nav {
     margin-left: auto;  /* Pushes nav to the right */
@@ -201,20 +215,7 @@ body {
       transform: translateY(-100%);
     }
   }
-/* Flex container for logo and title */
-.logo-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-right: 20px;
-  }
-  
-  /* College Logo */
-  .college-logo {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-  }
+
   /* Hero Section Background Image */
 .hero-section {
     background-image: url('https://matrusri.edu.in/wp-content/uploads/2020/08/4.jpeg'); /* Replace with your image path */

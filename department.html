@@ -1,61 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Departments</title>
-    <link rel="stylesheet" href="department.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Departments</title>
+  <link rel="stylesheet" href="department.css" />
 </head>
 <body>
-    <header>
-        <div class="header-left">
-            <div class="logo-title">
-                <img src="https://matrusri.edu.in/wp-content/uploads/2021/11/cropped-MECS-LOGO-192x192.jpg" alt="College Logo" class="college-logo">
-            </div>
-            <div>
-        
-            <h1 class="institute-name">Matrusri Engineering College</h1>
-            <p class="tagline">An Autonomous Institution | Affiliated to Osmania University</p>
-        </div>
-        </div>
-            <nav class="main-nav">
-              <ul>
-                <a href="index.html">Home</a>
-                <li><a href="#">Login</a></li>
-                <li class="dropdown">
-                  <a href="#">About</a>
-                 
-                  <div class="dropdown-content">
-                    <a href="about.html">About the Institution</a>
-                    <a href="#">Management</a>
-                    <a href="#">Administration</a>
-                    <a href="#">Departments</a>
-                    <a href="#">Admission</a>
-                    <a href="#">Facilities</a>
-                    <a href="#">Students</a>
-                    <a href="#">Clubs</a>
-                  </div>
-                </li>
-              </ul>
-            </nav>
-            <h1>Our Departments</h1>
-        <nav>
-            <ul>
-                <li><a href="CIVIL.html">Civil Engineering</a></li>
-                <li><a href="CSE.html">Computer Science and Engineering</a></li>
-                <li><a href="ECE.html">Electronics and Communication Engineering</a></li>
-                <li><a href="EEE.html">Electrical and Electronics Engineering</a></li>
-                <li><a href="IT.html">Information Technology</a></li>
-                <li><a href="MECH.html">Mechanical Engineering</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section>
-            <h2>Welcome to Our Departments</h2>
-            <p>Explore the different departments offered at our institution.</p>
-        </section>
-    </main>
+ <!-- Header -->
+ <header>
+    <div class="header-left">
+       <div class="logo-title">
+           <img src="https://matrusri.edu.in/wp-content/uploads/2021/11/cropped-MECS-LOGO-192x192.jpg" alt="College Logo" class="college-logo">
+       </div>
+       <div>
+   
+       <h1 class="institute-name">Matrusri Engineering College</h1>
+       <p class="tagline">An Autonomous Institution | Affiliated to Osmania University</p>
+   </div>
+   </div>
+       <nav class="main-nav">
+         <ul>
+           <a href="index.html">Home</a>
+           <li><a href="#">Login</a></li>
+           <li class="dropdown">
+             <a href="#">About</a>
+            
+             <div class="dropdown-content">
+               <a href="about.html">About the Institution</a>
+               <a href="#">Management</a>
+               <a href="#">Administration</a>
+               <a href="department.html">Departments</a>
+               <a href="#">Admission</a>
+               <a href="#">Facilities</a>
+               <a href="#">Students</a>
+               <a href="#">Clubs</a>
+             </div>
+           </li>
+         </ul>
+       </nav>
+     </header>
+
+  <main>
+    <div class="department-heading">
+        <h2>Departments</h2>
+        <div class="underline"></div>
+      </div>
+      
+    <div class="accordion-item">
+      <div class="accordion-header">
+        Civil Engineering
+        <div class="accordion-icon">+</div>
+      </div>
+      <div class="accordion-content">
+        Civil Engineering focuses on infrastructure, structural design, and environmental systems.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        Computer Science and Engineering
+        <div class="accordion-icon">+</div>
+      </div>
+      <div class="accordion-content">
+        CSE emphasizes programming, algorithms, AI, and machine learning.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        Electronics and Communication Engineering
+        <div class="accordion-icon">+</div>
+      </div>
+      <div class="accordion-content">
+        ECE covers communication systems, embedded design, and VLSI.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        Electrical and Electronics Engineering
+        <div class="accordion-icon">+</div>
+      </div>
+      <div class="accordion-content">
+        EEE blends power systems, automation, and electrical circuits.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        Information Technology
+        <div class="accordion-icon">+</div>
+      </div>
+      <div class="accordion-content">
+        IT includes web dev, cybersecurity, databases, and cloud computing.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        Mechanical Engineering
+        <div class="accordion-icon">+</div>
+      </div>
+      <div class="accordion-content">
+        Mechanical Engineering covers design, manufacturing, and robotics.
+      </div>
+    </div>
+  </main>
+
+  <!-- JS for Accordion Toggle -->
+  <script>
+    const items = document.querySelectorAll('.accordion-item');
+    items.forEach(item => {
+      const header = item.querySelector('.accordion-header');
+      const icon = item.querySelector('.accordion-icon');
+
+      header.addEventListener('click', () => {
+        const open = item.classList.contains('active');
+        items.forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.accordion-icon').textContent = '+';
+          i.querySelector('.accordion-icon').classList.remove('rotate');
+        });
+        if (!open) {
+          item.classList.add('active');
+          icon.textContent = '−';
+          icon.classList.add('rotate');
+        }
+      });
+    });
+  </script>
+ 
+
 </body>
 </html>
